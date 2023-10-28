@@ -8,7 +8,7 @@ public class twoSumSortedArray {
                 ans[0]=left+1;
                 ans[1]=right+1;
                 return ans;
-            }else if(numbers[left]+numbers[right]<target&&numbers[left]<numbers[right]){
+            }else if(numbers[left]+numbers[right]<target){
                 left++;
             }
             else{
