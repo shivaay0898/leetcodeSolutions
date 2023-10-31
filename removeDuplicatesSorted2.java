@@ -14,6 +14,6 @@ public class removeDuplicatesSorted2 {
     public static void main(String[] args) {
         int arr[] = { 1, 1, 1, 1, 1, 2, 2, 2, 2, 3 };
         int k=removeDuplicates(arr);
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr)+" "+k);
     }
 }
