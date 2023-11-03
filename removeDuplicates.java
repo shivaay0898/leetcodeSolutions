@@ -1,23 +1,30 @@
 public class removeDuplicates {
-  
- public class ListNode {
-     int val;
-     ListNode next;
-     ListNode() {}
-     ListNode(int val) { this.val = val; }
-     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
- 
-class Solution {
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode temp=head;
-        while(temp!=null){
-            while(temp.next!=null&&temp.val==temp.next.val){
-                temp.next=temp.next.next;
+        ListNode temp = head;
+        while (temp != null) {
+            while (temp.next != null && temp.val == temp.next.val) {
+                temp.next = temp.next.next;
             }
-            temp=temp.next;
+            temp = temp.next;
         }
         return head;
     }
-}
 }
