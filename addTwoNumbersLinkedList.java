@@ -18,21 +18,23 @@ class addTwoNumbersLinkedList {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         addTwoNumbersLinkedList obj = new addTwoNumbersLinkedList();
-        ListNode ans = obj.new ListNode(0);
+        ListNode ans = obj.new ListNode();
         ListNode tempAns=ans;
         int carry = 0;
-        while (l1 != null && ans != null && l2 != null ) {
-            int tempsum = l1.val + l2.val;
-            ans.val = tempsum + carry;
-            if (tempsum / 10 == 1) {
-                carry = 1;
-            } else
-                carry = 0;
-            l1 = l1.next;
-            l2 = l2.next;
-            ans = ans.next;
+        while (l1 != null || l2 != null || carry>0) {
+            if(l1!=null){
+                carry+=l1.val;
+                l1=l1.next;
+            }
+            if(l2!=null){
+                carry+=l2.val;
+                l2=l2.next;
+            }
+            tempAns.next=obj.new ListNode(carry%10);
+            carry/=10;
+            tempAns=tempAns.next;
         }
-        return tempAns;
+        return ans.next;
     }
 
     public static void main(String[] args) {
