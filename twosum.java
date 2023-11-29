@@ -23,7 +23,6 @@ public class twosum {
         return new int[] {numToIndex.get(target - nums[i]), i};
       numToIndex.put(nums[i], i);
     }
-
     throw new IllegalArgumentException();
     }
     public static void main(String[] args) {
