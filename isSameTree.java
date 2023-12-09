@@ -1,6 +1,4 @@
-import javax.swing.tree.TreeNode;
-
-public class constructBinarySearchTreeFromPreorderTraversal {
+public class isSameTree {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -20,10 +18,10 @@ public class constructBinarySearchTreeFromPreorderTraversal {
         }
     }
 
-    public TreeNode bstFromPreorder(int[] preorder) {
-        int currMax=preorder[0];
-        TreeNode root=new TreeNode(currMax);
-        
-        return root;
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null || q == null) {
+            return p == q;
+        }
+        return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }

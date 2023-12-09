@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-import apple.laf.JRSUIUtils.Tree;
-
 public class levelOrderTraversal {
     public class TreeNode {
             int val;
